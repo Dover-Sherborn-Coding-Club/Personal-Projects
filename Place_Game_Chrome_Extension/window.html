@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>City Guessing Game</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin: 20px;
+      height: 500px;
+      width: 500px;
+    }
+
+    #container {
+      display: flex;
+      justify-content: space-around;
+      margin-top: 20px;
+    }
+
+    #guessedCities {
+      text-align: left;
+    }
+
+    .error {
+      color: red;
+    }
+  </style>
+</head>
+<body>
+  <h1>Untakshari</h1>
+
+  <button id="toggleMessageBtn">Rules</button>
+  <div id="hiddenMessage" style="font-size: 10px; display: none;">Think of as many places you can starting with a certain letter. The score is the number of places you can name.</div>
+
+  <div id="settings">
+    <br>
+    <label for="startLetter">Start with letter:</label>
+    <select id="startLetter">
+      <option value="">Any Letter</option>
+      <option value="a">A</option>
+      <option value="b">B</option>
+      <option value="c">C</option>
+      <option value="d">D</option>
+      <option value="e">E</option>
+      <option value="f">F</option>
+      <option value="g">G</option>
+      <option value="h">H</option>
+      <option value="i">I</option>
+      <option value="j">J</option>
+      <option value="k">K</option>
+      <option value="l">L</option>
+      <option value="m">M</option>
+      <option value="n">N</option>
+      <option value="o">O</option>
+      <option value="p">P</option>
+      <option value="q">Q</option>
+      <option value="r">R</option>
+      <option value="s">S</option>
+      <option value="t">T</option>
+      <option value="u">U</option>
+      <option value="v">V</option>
+      <option value="w">W</option>
+      <option value="x">X</option>
+      <option value="y">Y</option>
+      <option value="z">Z</option>
+    </select>
+
+    <label for="timeLimit">Time Limit:</label>
+    <select id="timeLimit">
+      <option value="60">1 Minute</option>
+      <option value="120">2 Minutes</option>
+      <option value="180">3 Minutes</option>
+      <option value="300">5 Minutes</option>
+      <option value="480">8 Minutes</option>
+    </select>
+
+    <button id="startBtn">Start Game</button>
+    <button id="resetBtn">Reset Game</button>
+  </div>
+
+  <br>
+
+  <label for="cityInput">Enter Place Names:</label>
+  <input type="text" id="cityInput" placeholder="Type city names">
+  <button id="checkBtn">Enter Place</button>
+  <div id="timer"></div>
+  <span id="errorMessage" class="error"></span>
+
+  <div id="container">
+    <div id="guessedCities">
+      <h2>Places Named:</h2>
+      <div id="guessedCitiesList"></div>
+    </div>
+
+    <div>
+      <h2>Score</h2>
+      <div id="score"></div>
+      <div id="correctGuesses"></div>
+      <br>
+      <br>
+      <button id="displayCitiesBtn">Display 10 Places</button>
+    </div>
+  </div>
+  <div id="displayCitiesContainer" style="position: fixed; bottom: 20px; right: 60px;"></div>
+  <script src="javascript.js"></script>
+</body>
+</html>
