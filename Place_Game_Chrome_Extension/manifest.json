@@ -1,0 +1,16 @@
+{
+  "manifest_version": 3,
+  "name": "Untatchury",
+  "version": "1.0",
+  "description": "Untatchury",
+  "permissions": [
+    "storage",
+    "activeTab"
+  ],
+  "action": {
+    "default_popup": "window.html"
+  },
+  "content_security_policy": {
+    "extension_pages": "script-src 'self'; object-src 'self'"
+  }
+}
